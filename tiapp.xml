@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+<id>com.jeremyraines.jsa</id>
+<name>jeopardy score along</name>
+<version>1.0</version>
+<publisher>jeremy</publisher>
+<url>www.jeremyraines.com</url>
+<description>No description provided</description>
+<copyright>2010 by jeremy</copyright>
+<icon>default_app_logo.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+<guid>7b0ce3d3-7c0b-4250-b7bd-872b16f28c2e</guid>
+</ti:app>
