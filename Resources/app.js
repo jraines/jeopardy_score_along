@@ -4,6 +4,7 @@ Titanium.UI.setBackgroundColor('#000');
 var tabGroup = Titanium.UI.createTabGroup();
 
 
+
 Titanium.App.Properties.setInt('score', 0);
 
 var win1 = Titanium.UI.createWindow({
@@ -18,11 +19,25 @@ var win2 = Titanium.UI.createWindow({
 	url:'round2.js'
 });
 
+
+
+
+
 var tab1 = Titanium.UI.createTab({title:'Jeopardy! Round', window:win1});
 var tab2 = Titanium.UI.createTab({title:'Double Jeopardy!', window:win2});
 
 tabGroup.addTab(tab1);
 tabGroup.addTab(tab2);
+
+tabGroup.addEventListener('focus', function() {
+	Ti.API.info('tab group focus event');
+	Ti.App.fireEvent('special_focus',{name:'bar'});
+});
+
+Ti.App.addEventListener('special_focus', function(){
+	Ti.API.info('special focus event heard in app.js');
+});
+
 tabGroup.open();
 
 

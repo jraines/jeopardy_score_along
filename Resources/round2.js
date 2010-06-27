@@ -1,25 +1,4 @@
-function update_score(points, response) {
-	var current_score_string = Titanium.App.Properties.getString('score');
-	var current_score = Number(current_score_string);
-	if (response == 'correct') {
-		Titanium.App.Properties.setInt('score', current_score + points);
-	} else {
-		Titanium.App.Properties.setInt('score', current_score - points);
-	}
-	var new_score = Titanium.App.Properties.getString('score');
-	score_label.text = new_score;
-}
-
-var score_label = Titanium.UI.createLabel({
-	text:'0',
-	top:10,
-	height:'auto',
-	width:300,
-	textAlign:'center',
-	font:{fontSize:36},
-	shadowColor:'#fff',
-	shadowOffset:{a:4,y:4}
-});
+Titanium.include('update_score.js');
 
 var	button1 = Titanium.UI.createButton({
 	title:'400',
@@ -211,6 +190,11 @@ button6.addEventListener('click', function() {
 	popup.open();
 });
 
+
+
+Titanium.App.addEventListener('special_focus', function(){
+	update_score(0,'correct');
+});
 
 Titanium.UI.currentWindow.add(score_label);
 Titanium.UI.currentWindow.add(button1);
