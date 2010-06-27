@@ -213,7 +213,7 @@ button6.addEventListener('click', function() {
 		width:'300px'
 	});
 	button1.addEventListener('click', function(){
-		update_score(wager.value, 'correct');
+		update_score(Number(wager.value), 'correct');
 		popup.close();
 	});
 	button2.addEventListener('click', function(){
