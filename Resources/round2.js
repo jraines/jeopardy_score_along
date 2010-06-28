@@ -1,5 +1,7 @@
 Titanium.include('update_score.js');
 
+update_score(0, 'correct');
+
 var	button1 = Titanium.UI.createButton({
 	title:'400',
 	width:'300px',
